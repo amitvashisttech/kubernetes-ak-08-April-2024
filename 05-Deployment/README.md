@@ -1,10 +1,4 @@
  ```
-   35  kubectl apply -f helloworld.yaml 
-   36  kubectl  get deploy,rs,pod
-   37  kubectl get pods 
-   38  kubectl  get svc 
-   39  kubectl  get deploy
-       kubectl expose deploy helloworld-deployment --type=NodePort 
    40  cat README.md 
    41  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:2
    42  kubectl  get deploy 
