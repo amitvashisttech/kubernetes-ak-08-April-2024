@@ -8,6 +8,12 @@ docker login
 kubectl create secret generic regcred --from-file=.dockerconfigjson=/root/.docker/config.json --type=kubernetes.io/dockerconfigjson -n kube-system
 ```
 
+OR 
+
+```
+kubectl create secret docker-registry NAME --docker-username=user --docker-password=password --docker-email=email -n kube-system
+```
+
 ## Deploy Calico
 ```
 kubectl apply -f calico.yaml
