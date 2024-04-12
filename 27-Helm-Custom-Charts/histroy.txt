@@ -1,0 +1,62 @@
+   93  mkdir 21-Helm-Custom-Charts
+   95  cd 21-Helm-Custom-Charts/
+   96  ls
+   97  helm create my-tiny-web
+   98  ls
+   99  cd my-tiny-web/
+  100  ls
+  101  cat Chart.yaml 
+  102  ls
+  103  cd charts/
+  104  ls
+  105  cd ..
+  106  ls
+  107  ls -R templates/
+  108  cat templates/service.yaml 
+  109  cat templates/deployment.yaml 
+  110  ls
+  111  cd ..
+  112  ls
+  113  helm install my-web my-tiny-web --dry-run 
+  114  helm install my-web my-tiny-web 
+  115  kubectl  get all 
+  116  helm list 
+  117  ls
+  118  mkdir 0.1.0 
+  119  ls
+  120  mv my-tiny-web 0.1.0/
+  121  ls
+  122  mv 0.1.0 v1
+  123  ls
+  124  cp -rf v1 v2 
+  125  ls
+  126  cd v2/
+  127  ls
+  128  helm list 
+  129  helm history my-web
+  130  helm upgrade my-web my-tiny-web
+  131  helm history my-web
+  132  kubectl  get all 
+  133  helm rollback my-web 
+  134  helm history my-web
+  135  kubectl  get all 
+  136  ls
+  137  cd ..
+  138  ls
+  139  cp -rf v1 environments-deployment
+  140  ls
+  141  cd environments-deployment/
+  142  ls
+  143  cp -rf my-tiny-web/values.yaml dev.yaml
+  144  cp -rf my-tiny-web/values.yaml prod.yaml
+  145  ls
+  146  helm install my-web-dev my-tiny-web -f dev.yaml
+  147  helm install my-web-prod my-tiny-web -f prod.yaml 
+  148  helm list 
+  149  kubectl  get deploy 
+  150  kubectl  get svc 
+  151  ls
+  152  cd ..
+  153  ls
+  154  history 
+  155  history > histroy.txt 
